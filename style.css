@@ -1,0 +1,192 @@
+/*
+*Theme Name : DucThinh Theme 2017;
+* description: Simple theme designed by Duc Thinh
+* Theme URI : http://DucThinh.com
+* Version: 1.0
+* Author: Duc Thinh
+* Author URL : ducthinh.com
+* Tags: basic, two columns , post format
+* Textdomain: ducthinh
+* Language Folder: /languages
+*/
+/* Color Variables ==================================== */
+/* Font Stack ==================================== */
+/* Break Point ==================================== */
+/*================================================*/
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+  font-family: 'Droid Serif', serif;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:visited {
+  color: #c3917d;
+  text-decoration: underline;
+}
+input,
+input[type="submit"],
+button {
+  border: 1px solid #bbbbbb !important;
+  padding: 5px 10px;
+}
+h1 {
+  font-size: 2.2em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.55em;
+}
+h5 {
+  font-size: 1.3em;
+}
+h6 {
+  font-size: 1.1em;
+}
+table,
+table tr,
+table td {
+  border: 1px solid #e7e7e7;
+  padding: 8px;
+}
+/* Chia column website */
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 10px 25px;
+  font-family: 'Droid Serif', serif;
+}
+.content {
+  overflow: hidden;
+}
+/*----------Sidebar---------*/
+#sidebar {
+  font-size: 1.17em;
+}
+#sidebar a {
+  color: #bbbbbb;
+}
+#sidebar ul,
+#sidebar ol,
+#sidebar li {
+  list-style: none;
+  padding: 0;
+}
+#sidebar .widget {
+  padding: 1em 0;
+}
+#sidebar .widget ul {
+  list-style: none;
+  padding-left: 1.7em !important;
+}
+#sidebar .widget ul li {
+  margin-bottom: 8px !important;
+  list-style: square !important;
+  padding-left: 1em;
+}
+#sidebar .widgettitle {
+  text-transform: uppercase;
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+#sidebar #searchform .screen-reader-text {
+  display: none;
+}
+#sidebar .widget_calendar caption {
+  text-align: center;
+  border: 1px solid #bbbbbb;
+  padding: 1em 0;
+}
+#sidebar .widget_calendar thead {
+  background: #f5f5f5;
+}
+#sidebar .widget_calendar thead tr th {
+  padding: 1em 0;
+  text-align: center;
+}
+#sidebar .widget_calendar tfoot {
+  display: none;
+}
+#sidebar .widget_calendar tbody tr {
+  border: 0;
+}
+#sidebar .widget_calendar tbody tr td {
+  border: 0;
+}
+#sidebar .widget_calendar tbody #today {
+  padding-left: 0;
+}
+#sidebar .widget_calendar tbody #today a {
+  font-weight: 600;
+  color: #232323;
+  border: 1px solid #232323;
+  -moz-border-radius: 50% ;
+  border-radius: 25px;
+  padding: 5px;
+  background: #f5f5f5;
+}
+#sidebar .widget_calendar tbody #today a:hover {
+  text-decoration: none;
+}
+/*----------Header---------*/
+#header {
+  width: 100%;
+  color: #ffffff;
+}
+#header a {
+  color: #ffffff;
+}
+#header a:hover {
+  text-decoration: none;
+  color: #c3917d;
+  font-size: 1.17em;
+}
+#header .top-header {
+  width: 100%;
+  padding-top: 40px;
+}
+#header .top-header h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5em 0 0.5em 4em;
+}
+#header .top-header .header-navigation ul li {
+  float: left;
+  list-style: none;
+  padding: 2em 3em 2em 0;
+  margin: 0;
+}
+.logo {
+  margin: 7em 0;
+}
+.logo a {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2.02em;
+  color: #232323;
+}
+.logo a:hover {
+  text-decoration: none;
+  color: #c3917d;
+}
+.logo .site-description {
+  font-size: 1.17em;
+}

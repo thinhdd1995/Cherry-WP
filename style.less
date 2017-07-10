@@ -1,0 +1,194 @@
+/*
+*Theme Name : DucThinh Theme 2017;
+* description: Simple theme designed by Duc Thinh
+* Theme URI : http://DucThinh.com
+* Version: 1.0
+* Author: Duc Thinh
+* Author URL : ducthinh.com
+* Tags: basic, two columns , post format
+* Textdomain: ducthinh
+* Language Folder: /languages
+*/
+@import 'variables';
+
+/*================================================*/
+html{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 100%;
+	font-family: @Droid-Serif;
+	-webkit-font-smoothing: antialiased;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+}
+a:hover,a:visited {
+	color: @Old-rose;
+	text-decoration: underline;
+}
+input,input[type="submit"],button{
+	border: 1px solid @silver !important;
+	padding: 5px 10px;
+}
+h1{
+	font-size: 2.2em;
+}
+h2{
+	font-size: 2em;
+}
+h3{
+	font-size: 1.8em;
+}
+h4{
+	font-size: 1.55em;
+}
+h5{
+	font-size: 1.3em;
+}
+h6{
+	font-size: 1.1em;
+}
+table,table tr, table td {
+	border: 1px solid @Mecury;
+	padding: 8px;
+}
+/* Chia column website */
+#container{
+	max-width: 1200px;
+	margin: 0 auto;
+	background: @white;
+	padding: 10px 25px;
+	font-family: @Droid-Serif;
+}
+.content{
+	overflow: hidden;
+}
+
+/*----------Sidebar---------*/
+#sidebar{
+	font-size: 1.17em;
+	a{
+		color: @silver;
+	}
+	ul,ol,li{
+	
+		list-style: none;
+		padding: 0;
+	}
+	.widget{
+		padding: 1em 0;
+		ul{
+			list-style: none;
+			padding-left: 1.7em !important;
+			li{
+				margin-bottom: 8px !important;
+				list-style: square !important;
+				padding-left: 1em;
+			}
+		}
+	}
+	.widgettitle{
+		text-transform: uppercase;
+		font-size: 1.17em;
+		margin: 1em 0;
+	}
+	#searchform .screen-reader-text{
+		display: none;
+	}
+	.widget_calendar{
+		caption{
+			text-align: center;
+			border: 1px solid @silver;
+			padding: 1em 0;
+		}
+		thead{
+			background: @white-sand;
+			tr th{
+				padding: 1em 0;
+				text-align: center;
+			}
+		}
+		tfoot{
+			display: none;
+		}
+		tbody{
+			tr {
+				border: 0;
+				td{
+				border: 0;
+				}
+			}
+			#today{
+				padding-left: 0;
+				a{
+					font-weight: 600;
+					color: #232323;
+					border: 1px solid #232323;
+					-moz-border-radius: 50% ;
+					border-radius: 25px;
+					padding: 5px;
+					background: @white-sand;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+/*----------Header---------*/
+#header{
+	width: 100%;
+	color: @white;
+	a{
+		color: @white;
+		&:hover{
+			text-decoration: none;
+			color: @Old-rose;
+			font-size: 1.17em;
+		}
+	}
+	.top-header {
+		width: 100%;
+		padding-top: 40px;
+		h3{
+			font-weight: bold;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			text-align: center;
+    		padding: 0.5em 0 0.5em 4em;
+		}
+		.header-navigation ul li{
+			float: left;
+			list-style: none;
+ 			padding: 2em 3em 2em 0;
+ 			margin: 0;
+  			
+		}
+	}
+	
+}
+.logo{
+	margin: 7em 0;
+	a{
+		font-family: @Script;
+		font-size: 2.02em;
+		color: @nav-color;
+		&:hover{
+			text-decoration: none;
+			color: @Old-rose;
+		}
+	}
+	.site-description{
+		font-size: 1.17em;
+	}
+}
