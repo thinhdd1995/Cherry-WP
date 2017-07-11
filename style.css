@@ -130,10 +130,8 @@ table td {
 #sidebar .widget_calendar tbody tr td {
   border: 0;
 }
-#sidebar .widget_calendar tbody #today {
+#sidebar .widget_calendar tbody tr td a {
   padding-left: 0;
-}
-#sidebar .widget_calendar tbody #today a {
   font-weight: 600;
   color: #232323;
   border: 1px solid #232323;
@@ -142,7 +140,7 @@ table td {
   padding: 5px;
   background: #f5f5f5;
 }
-#sidebar .widget_calendar tbody #today a:hover {
+#sidebar .widget_calendar tbody tr td a:hover {
   text-decoration: none;
 }
 /*----------Header---------*/
@@ -174,6 +172,7 @@ table td {
   list-style: none;
   padding: 2em 3em 2em 0;
   margin: 0;
+  cursor: pointer;
 }
 .logo {
   margin: 7em 0;
@@ -189,4 +188,37 @@ table td {
 }
 .logo .site-description {
   font-size: 1.17em;
+}
+/*----------Footer---------*/
+#footer {
+  background: #1f1f1f;
+  color: #696e75;
+  padding: 1.7em 0;
+}
+#footer .social-contact {
+  margin: 2em 0;
+}
+#footer .social-contact a {
+  color: #c3917d;
+  font-size: 1.17em;
+  padding: 0.5em;
+}
+#footer .social-contact a .fa {
+  border: 1px solid #252525;
+  padding: 8px 10px;
+  background: #252525;
+  border-radius: 10px;
+}
+#footer .social-contact a:hover {
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin: 0;
+}
+#footer .copyright {
+  font-family: 'Droid Serif', serif;
+  font-weight: 300;
+  font-size: 1.17em;
+}
+#footer .copyright .fa {
+  color: #c3917d;
 }
