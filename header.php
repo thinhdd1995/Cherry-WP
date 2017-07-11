@@ -5,6 +5,7 @@
 	<link rel="profile" href="http://gmgp.org/xfn/11" />
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Kaushan+Script" rel="stylesheet">
 	<link rel="pingback"  href="<?php bloginfo('pingback_url'); ?>" />
+	<script src="https://use.fontawesome.com/b72421ded4.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >	
