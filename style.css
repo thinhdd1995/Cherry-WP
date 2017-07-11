@@ -79,6 +79,7 @@ table td {
 /*----------Sidebar---------*/
 #sidebar {
   font-size: 1.17em;
+  font-family: 'Droid Serif', serif;
 }
 #sidebar a {
   color: #bbbbbb;
@@ -101,13 +102,33 @@ table td {
   list-style: square !important;
   padding-left: 1em;
 }
+#sidebar .widget .search-form-box {
+  width: 100%;
+  position: relative;
+}
+#sidebar .widget .search-form-box #searchsubmit {
+  display: none;
+}
+#sidebar .widget .search-form-box #s {
+  width: 17em;
+}
+#sidebar .widget .search-form-box #s::placeholder {
+  font-style: italic;
+  color: #bbbbbb;
+}
+#sidebar .widget .search-form-box::after {
+  content: "\f002";
+  position: relative;
+  top: 0px;
+  color: #a9afb1;
+  font-family: "FontAwesome";
+  font-size: 1.17em;
+  right: 2em;
+}
 #sidebar .widgettitle {
   text-transform: uppercase;
   font-size: 1.17em;
   margin: 1em 0;
-}
-#sidebar #searchform .screen-reader-text {
-  display: none;
 }
 #sidebar .widget_calendar caption {
   text-align: center;
@@ -130,7 +151,7 @@ table td {
 #sidebar .widget_calendar tbody tr td {
   border: 0;
 }
-#sidebar .widget_calendar tbody tr td a {
+#sidebar .widget_calendar tbody tr #today a {
   padding-left: 0;
   font-weight: 600;
   color: #232323;
@@ -140,21 +161,24 @@ table td {
   padding: 5px;
   background: #f5f5f5;
 }
-#sidebar .widget_calendar tbody tr td a:hover {
+#sidebar .widget_calendar tbody tr #today a:hover {
   text-decoration: none;
 }
 /*----------Header---------*/
 #header {
   width: 100%;
   color: #ffffff;
+  font-family: 'Droid Serif', serif;
 }
 #header a {
   color: #ffffff;
+  font-size: 1.17em;
 }
 #header a:hover {
   text-decoration: none;
   color: #c3917d;
-  font-size: 1.17em;
+  paddiing: 0;
+  margin: 0;
 }
 #header .top-header {
   width: 100%;
@@ -173,6 +197,7 @@ table td {
   padding: 2em 3em 2em 0;
   margin: 0;
   cursor: pointer;
+  font-weight: 300;
 }
 .logo {
   margin: 7em 0;
@@ -182,12 +207,14 @@ table td {
   font-size: 2.02em;
   color: #232323;
 }
-.logo a:hover {
+.logo a:hover,
+.logo a :active {
   text-decoration: none;
   color: #c3917d;
 }
 .logo .site-description {
   font-size: 1.17em;
+  font-family: 'Droid Serif', serif;
 }
 /*----------Footer---------*/
 #footer {
