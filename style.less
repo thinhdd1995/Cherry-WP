@@ -94,15 +94,37 @@ table,table tr, table td {
 				padding-left: 1em;
 			}
 		}
+		.search-form-box{
+			width: 100%;
+			position: relative;
+			#searchsubmit{
+				display: none;
+			}
+			#s{
+				width: 17em;
+
+				&::placeholder{
+					font-style: italic;
+					color: @silver;
+				}
+			}
+			&::after{
+				content: "\f002";
+			    position: relative;
+			    top: 0px;
+			    color: #a9afb1;
+			    font-family: "FontAwesome";
+			    font-size: 1.17em;
+			    right: 2em;		    
+			}
+		}
 	}
 	.widgettitle{
 		text-transform: uppercase;
 		font-size: 1.17em;
 		margin: 1em 0;
 	}
-	#searchform .screen-reader-text{
-		display: none;
-	}
+	
 	.widget_calendar{
 		caption{
 			text-align: center;
@@ -123,24 +145,22 @@ table,table tr, table td {
 			tr {
 				border: 0;
 				td{
-				border: 0;
-					a{
-						padding-left: 0;
-						font-weight: 600;
-						color: #232323;
-						border: 1px solid #232323;
-						-moz-border-radius: 50% ;
-						border-radius: 25px;
-						padding: 5px;
-						background: @white-sand;
+					border: 0;		
+				}
+				#today  a{
+							padding-left: 0;
+							font-weight: 600;
+							color: #232323;
+							border: 1px solid #232323;
+							-moz-border-radius: 50% ;
+							border-radius: 25px;
+							padding: 5px;
+							background: @white-sand;
 							&:hover{
 								text-decoration: none;
 							}	
-					}
-				}
-			}
-			
-			
+						}
+			}		
 		}
 	}
 }
@@ -187,7 +207,7 @@ table,table tr, table td {
 		font-family: @Script;
 		font-size: 2.02em;
 		color: @nav-color;
-		&:hover{
+		&:hover,:active{
 			text-decoration: none;
 			color: @Old-rose;
 		}
