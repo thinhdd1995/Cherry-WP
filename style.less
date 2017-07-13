@@ -226,6 +226,38 @@ table,table tr, table td {
 
 
 /*----------Footer---------*/
+#pre-footer{
+	background: #232323;
+	padding: 4em 0;
+	font-size: 1.17em;
+	img{
+		margin: 0.5em 0;
+	}
+	h5{
+		font-size: 18px;
+		color: @white;
+		margin-bottom: 1em;
+	}
+	p{
+		color: @Nevada;
+		padding: 0.5em 20em;
+		@media(max-width: @brk-medium){
+			padding: 0;
+			text-align: center;
+		}
+	}
+	.more-info{
+		a{
+			margin: 0 1em;
+			&:hover{
+				text-decoration: none;
+				color: @Old-rose;
+			}
+		}
+	}
+}
+
+
 #footer{
 	background: #1f1f1f;
 	color: @Nevada;

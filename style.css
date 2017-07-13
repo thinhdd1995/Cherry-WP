@@ -225,6 +225,36 @@ table td {
   font-family: 'Droid Serif', serif;
 }
 /*----------Footer---------*/
+#pre-footer {
+  background: #232323;
+  padding: 4em 0;
+  font-size: 1.17em;
+}
+#pre-footer img {
+  margin: 0.5em 0;
+}
+#pre-footer h5 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+#pre-footer p {
+  color: #696e75;
+  padding: 0.5em 20em;
+}
+@media (max-width: 768px) {
+  #pre-footer p {
+    padding: 0;
+    text-align: center;
+  }
+}
+#pre-footer .more-info a {
+  margin: 0 1em;
+}
+#pre-footer .more-info a:hover {
+  text-decoration: none;
+  color: #c3917d;
+}
 #footer {
   background: #1f1f1f;
   color: #696e75;
