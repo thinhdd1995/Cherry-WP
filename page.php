@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 <div class="content">
 	<div id="main-content" class="col-md-8">
-		<?php if ( have_posts() ) :while( have_posts() ): the_post(); ?>
-
-			<?php get_template_part('content', get_post_format()); ?>
-
+		<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+			<?php get_template_part('content',get_post_format()); ?>
+			
 		<?php endwhile ?>
-		<?php ducthinh_pagination(); ?>
+
 		<?php else: ?>
 			<?php get_template_part('content','none'); ?>
 		<?php endif; ?>

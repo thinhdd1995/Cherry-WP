@@ -10,7 +10,7 @@
 * Language Folder: /languages
 */
 @import 'variables';
-
+@import url(reset.css);
 /*================================================*/
 html{
 	box-sizing: border-box;
@@ -77,9 +77,16 @@ table,table tr, table td {
 	font-family: @Droid-Serif;
 	a{
 		color: @silver;
+		&:hover{
+			color: #232323;
+			text-decoration: none;
+		}
+		&:active{
+			color: #232323;
+			text-decoration: none;
+		}
 	}
 	ul,ol,li{
-	
 		list-style: none;
 		padding: 0;
 	}
@@ -147,20 +154,20 @@ table,table tr, table td {
 				td{
 					border: 0;		
 				}
-				#today  a{
-							padding-left: 0;
-							font-weight: 600;
-							color: #232323;
-							border: 1px solid #232323;
-							-moz-border-radius: 50% ;
-							border-radius: 25px;
-							padding: 5px;
-							background: @white-sand;
-							&:hover{
-								text-decoration: none;
-							}	
-						}
-			}		
+			}	
+			a{
+				padding-left: 0;
+				font-weight: 600;
+				color: #232323;
+				border: 1px solid #232323;
+				-moz-border-radius: 50% ;
+				border-radius: 25px;
+				padding: 5px;
+				background: @white-sand;
+				&:hover{
+					text-decoration: none;
+				}	
+			}	
 		}
 	}
 }
@@ -182,7 +189,6 @@ table,table tr, table td {
 	}
 	.top-header {
 		width: 100%;
-		padding-top: 40px;
 		h3{
 			font-weight: bold;
 			font-size: 1.5em;
@@ -249,6 +255,51 @@ table,table tr, table td {
 		font-size: 1.17em;
 		.fa{
 			color: @Old-rose;
+		}
+	}
+}
+
+
+/*----------Main Content---------*/
+.content{
+	.entry-title{
+		a:hover{
+			opacity: 0.5;
+			text-decoration: none;
+		}
+	}
+	.entry-meta{
+		margin: 1em 0;
+		.author{
+			padding-left: 2em;
+		}
+		.fa-eye{
+			padding-left: 2em;
+		}
+	}
+	.entry-footer{
+		.entry-tag{
+			a{
+				color: @silver;
+				font-style: italic;
+				&:hover{
+					color: @Old-rose;
+					text-decoration: none;
+				}
+			}
+			.entry-social{
+				padding-left: 27em;
+				a{
+					font-size: 1.5em;
+					margin: 0 0.3em;
+				}
+				@media(max-width: @brk-medium){
+					padding:2.8em;
+				}
+				.fa-print{
+					color: #232323;
+				}
+			}
 		}
 	}
 }

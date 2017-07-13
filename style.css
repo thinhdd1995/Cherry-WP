@@ -1,3 +1,4 @@
+@import url(reset.css);
 /*
 *Theme Name : DucThinh Theme 2017;
 * description: Simple theme designed by Duc Thinh
@@ -84,6 +85,14 @@ table td {
 #sidebar a {
   color: #bbbbbb;
 }
+#sidebar a:hover {
+  color: #232323;
+  text-decoration: none;
+}
+#sidebar a:active {
+  color: #232323;
+  text-decoration: none;
+}
 #sidebar ul,
 #sidebar ol,
 #sidebar li {
@@ -151,7 +160,7 @@ table td {
 #sidebar .widget_calendar tbody tr td {
   border: 0;
 }
-#sidebar .widget_calendar tbody tr #today a {
+#sidebar .widget_calendar tbody a {
   padding-left: 0;
   font-weight: 600;
   color: #232323;
@@ -161,7 +170,7 @@ table td {
   padding: 5px;
   background: #f5f5f5;
 }
-#sidebar .widget_calendar tbody tr #today a:hover {
+#sidebar .widget_calendar tbody a:hover {
   text-decoration: none;
 }
 /*----------Header---------*/
@@ -182,7 +191,6 @@ table td {
 }
 #header .top-header {
   width: 100%;
-  padding-top: 40px;
 }
 #header .top-header h3 {
   font-weight: bold;
@@ -248,4 +256,41 @@ table td {
 }
 #footer .copyright .fa {
   color: #c3917d;
+}
+/*----------Main Content---------*/
+.content .entry-title a:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.content .entry-meta {
+  margin: 1em 0;
+}
+.content .entry-meta .author {
+  padding-left: 2em;
+}
+.content .entry-meta .fa-eye {
+  padding-left: 2em;
+}
+.content .entry-footer .entry-tag a {
+  color: #bbbbbb;
+  font-style: italic;
+}
+.content .entry-footer .entry-tag a:hover {
+  color: #c3917d;
+  text-decoration: none;
+}
+.content .entry-footer .entry-tag .entry-social {
+  padding-left: 27em;
+}
+.content .entry-footer .entry-tag .entry-social a {
+  font-size: 1.5em;
+  margin: 0 0.3em;
+}
+@media (max-width: 768px) {
+  .content .entry-footer .entry-tag .entry-social {
+    padding: 2.8em;
+  }
+}
+.content .entry-footer .entry-tag .entry-social .fa-print {
+  color: #232323;
 }
