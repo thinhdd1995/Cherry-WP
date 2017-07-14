@@ -11,7 +11,7 @@
 			<header id="header" class="<?php if ( get_option( 'show_on_front' ) == 'page' && is_front_page() ): echo 'header-front-page';
 						else: echo 'header-blog'; endif; ?>" style="<?php echo $style ?>">
 						<div class="top-header">
-							<div class="container-fluid">
+							
 								<div class="row" style="background: #222222;">
 									<div class="container">
 										<div class="col-sm-4 col-xs-8">
@@ -32,7 +32,7 @@
 										</div><!--/.col-sm-10-->
 									</div>
 								</div><!--/.row-->
-							</div><!--/.container-->
+							
 						</div><!--/.top-header-->
 
 			</header><!--/#header-->

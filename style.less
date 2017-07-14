@@ -109,7 +109,7 @@ table,table tr, table td {
 			}
 			#s{
 				width: 17em;
-
+				height: 2.8em;
 				&::placeholder{
 					font-style: italic;
 					color: @silver;
@@ -177,6 +177,9 @@ table,table tr, table td {
 	width: 100%;
 	color: @white;
 	font-family: @Droid-Serif;
+	.row{
+		margin-right: 0;
+	}
 	a{
 		color: @white;
 		font-size: 1.17em;
@@ -193,8 +196,7 @@ table,table tr, table td {
 			font-weight: bold;
 			font-size: 1.5em;
 			text-transform: uppercase;
-			text-align: center;
-    		padding: 0.5em 0 0.5em 4em;
+			margin-top: 1.3em;
 		}
 		.header-navigation ul li{
 			float: left;
@@ -294,22 +296,61 @@ table,table tr, table td {
 
 /*----------Main Content---------*/
 .content{
+	padding: 4em 0;
 	.entry-title{
-		a:hover{
+		a{
+			font-size: 1.17em;
+			font-family: @Droid-Serif;
+			color: #232323;
+			&:hover{
 			opacity: 0.5;
 			text-decoration: none;
+			}
+		}
+	}
+	.entry-title-single{
+		text-align: center;
+		margin: 2.5em 0 0 0;
+		a{
+			color: #232323;
+			&:hover{
+			opacity: 0.5;
+			text-decoration: none;
+			}
+			font-family: @Script;
+			font-size: 1.7em;
+		}
+		.entry-meta{
+			margin: 1em 0 5em 0;
+			.author{
+				padding-left: 2em;
+			}
+			.fa-eye{
+				padding-left: 2em;
+			}
 		}
 	}
 	.entry-meta{
-		margin: 1em 0;
 		.author{
 			padding-left: 2em;
 		}
 		.fa-eye{
-			padding-left: 2em;
+			padding-left: 3em;
+		}
+	}
+	.entry-content{
+		display: none;
+	}
+	.entry-content-single{
+		padding: 2em 0 0 0;
+		blockquote{
+			color: #aeaeae;
+			font-style: italic;
+			font-size: 1.17em;
 		}
 	}
 	.entry-footer{
+		margin: 2.5em 0 0 0;
 		.entry-tag{
 			a{
 				color: @silver;
@@ -320,7 +361,7 @@ table,table tr, table td {
 				}
 			}
 			.entry-social{
-				padding-left: 27em;
+				padding-left: 22em;
 				a{
 					font-size: 1.5em;
 					margin: 0 0.3em;

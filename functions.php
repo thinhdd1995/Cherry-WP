@@ -101,16 +101,14 @@ if (!function_exists('ducthinh_logo')) {
 					get_bloginfo('url'),
 					get_bloginfo('description'),
 					get_bloginfo('sitename') );
-				} else {
-					printf( '<p><a href="%1$s" title="%2$s">%3$s</a></p>' ,
-					get_bloginfo('url'),
-					get_bloginfo('description'),
-					get_bloginfo('sitename') );
-
 				}
 			?>
 		</div>
-		<div class="site-description"><?php bloginfo('description'); ?></div><?php 
+		<div class="site-description"><?php 
+			if ( is_home() ) {
+					printf(get_bloginfo('description'));
+				}
+		?></div><?php 
 	}
 }
 /**
@@ -149,21 +147,14 @@ if ( !function_exists('ducthinh_thumbnail')){
  */
 if ( !function_exists('ducthinh_entry_header')){
 	function ducthinh_entry_header(){ ?>
-		<?php if ( is_single()) : ?>
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-		<?php else : ?>
+		<?php if ( !is_single()) : ?>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+		<?php else : ?>
+			<h2 class="entry-title-single"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title();  ?></a></h2>
 		<?php endif ; ?>
 	<?php }
 }
 
-if ( !function_exists('ducthinh_title_single')){
-	function ducthinh_title_single(){ ?>
-			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title();  ?></a></h3>
-			
-			
-	<?php }
-}
 
 
 /**
@@ -171,11 +162,17 @@ if ( !function_exists('ducthinh_title_single')){
  */
 if ( !function_exists('ducthinh_entry_meta')) {
 	function ducthinh_entry_meta() { ?>
-		<?php if ( !is_page()) : ?>
+		<?php if ( is_home()) : ?>
 			<div class="entry-meta">
-			<?php printf( __('<span class="date-published"><i class="fa fa-calendar" aria-hidden="true"></i> %1$s', 'ducthinh'), get_the_date() ); ?>
-			<?php echo postview_get(get_the_ID()); ?>
-			 <?php printf( __('<span class="author"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> %1$s', 'ducthinh'), get_the_author() ); ?>
+				<?php printf( __('<span class="date-published"><i class="fa fa-calendar" aria-hidden="true"></i> %1$s', 'ducthinh'), get_the_date() ); ?>
+				<?php echo postview_get(get_the_ID()); ?>
+			</div> 
+		<?php endif; ?>
+		<?php if (is_single()) :?>
+			<div class="entry-meta">
+				<?php printf( __('<span class="date-published"><i class="fa fa-calendar" aria-hidden="true"></i> %1$s', 'ducthinh'), get_the_date() ); ?>
+				<?php echo postview_get(get_the_ID()); ?>
+				<?php printf( __('<span class="author"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> %1$s', 'ducthinh'), get_the_author_meta( 'display_name', 1 ) ); ?>
 			</div>
 		<?php endif; ?>
 	<?php }
@@ -220,7 +217,7 @@ if ( !function_exists('ducthinh_entry_meta')) {
  		endif;
  	}
  }
-/*-----------------*/
+/*--------Display views---------*/
 function postview_set($postID) {
     $count_key = 'postview_number';
     $count = get_post_meta($postID, $count_key, true);
@@ -248,9 +245,6 @@ function postview_get($postID){
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 
-/**
- * ducthinh_entry_social_bar
-  */
 
 /*===========nhúng file style.css==========*/
 function ducthinh_style(){

@@ -38,15 +38,20 @@
 			</header><!--/#header-->
 			
 <div id="container">
-		<div class="logo text-center">
-			<?php ducthinh_title_single(); ?>
-		</div>
 <div class="content">
-	
-	<div id="main-content" class="col-md-8">
+	<div class="entry-title-single">
+		<?php ducthinh_entry_header(); ?>
+		<?php ducthinh_entry_meta();   ?>
+	</div>
+	<div id="main-content-single" class="col-md-8">
 		<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<?php postview_set(get_the_ID()); ?>
-			<?php get_template_part('content',get_post_format()); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+				<div class="entry-content-single">
+					<?php ducthinh_entry_content(); ?>
+					<?php (is_single()  ? ducthinh_entry_tag() : ''); ?>
+				</div>
+			</article>
 			
 		<?php endwhile ?>
 

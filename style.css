@@ -120,6 +120,7 @@ table td {
 }
 #sidebar .widget .search-form-box #s {
   width: 17em;
+  height: 2.8em;
 }
 #sidebar .widget .search-form-box #s::placeholder {
   font-style: italic;
@@ -179,6 +180,9 @@ table td {
   color: #ffffff;
   font-family: 'Droid Serif', serif;
 }
+#header .row {
+  margin-right: 0;
+}
 #header a {
   color: #ffffff;
   font-size: 1.17em;
@@ -196,8 +200,7 @@ table td {
   font-weight: bold;
   font-size: 1.5em;
   text-transform: uppercase;
-  text-align: center;
-  padding: 0.5em 0 0.5em 4em;
+  margin-top: 1.3em;
 }
 #header .top-header .header-navigation ul li {
   float: left;
@@ -288,18 +291,59 @@ table td {
   color: #c3917d;
 }
 /*----------Main Content---------*/
+.content {
+  padding: 4em 0;
+}
+.content .entry-title a {
+  font-size: 1.17em;
+  font-family: 'Droid Serif', serif;
+  color: #232323;
+}
 .content .entry-title a:hover {
   opacity: 0.5;
   text-decoration: none;
 }
-.content .entry-meta {
-  margin: 1em 0;
+.content .entry-title-single {
+  text-align: center;
+  margin: 2.5em 0 0 0;
+}
+.content .entry-title-single a {
+  color: #232323;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.7em;
+}
+.content .entry-title-single a:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.content .entry-title-single .entry-meta {
+  margin: 1em 0 5em 0;
+}
+.content .entry-title-single .entry-meta .author {
+  padding-left: 2em;
+}
+.content .entry-title-single .entry-meta .fa-eye {
+  padding-left: 2em;
 }
 .content .entry-meta .author {
   padding-left: 2em;
 }
 .content .entry-meta .fa-eye {
-  padding-left: 2em;
+  padding-left: 3em;
+}
+.content .entry-content {
+  display: none;
+}
+.content .entry-content-single {
+  padding: 2em 0 0 0;
+}
+.content .entry-content-single blockquote {
+  color: #aeaeae;
+  font-style: italic;
+  font-size: 1.17em;
+}
+.content .entry-footer {
+  margin: 2.5em 0 0 0;
 }
 .content .entry-footer .entry-tag a {
   color: #bbbbbb;
@@ -310,7 +354,7 @@ table td {
   text-decoration: none;
 }
 .content .entry-footer .entry-tag .entry-social {
-  padding-left: 27em;
+  padding-left: 22em;
 }
 .content .entry-footer .entry-tag .entry-social a {
   font-size: 1.5em;
