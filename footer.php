@@ -1,9 +1,11 @@
 <div id="pre-footer" class="text-center">
 	<div class="logo-footer">
-		<img src="<?php echo get_template_directory_uri() ?>/logo-footer.png">
-		<h5>CHERRY RESTAURANT</h5>	
+		
+		<img src="<?php echo get_theme_mod( 'img-upload' ); ?>">
+		<h5><?php bloginfo('sitename'); ?> RESTAURANT</h5>	
 	</div>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laborum minus neque tempore accusamus non consequuntur officia cupiditate consequatur quia alias, dolorum placeat quis voluptatum asperiores sapiente deleniti? Laboriosam, possimus.</p>
+	<p><?php echo get_theme_mod( 'Texts' ); ?></p>
+
 	<div class="more-info">
 		<a href=""><i class="fa fa-bookmark-o" aria-hidden="true"></i> Terms of Use</a>
 		<a href=""><i class="fa fa-question" aria-hidden="true"></i> FAQs</a>
@@ -19,7 +21,7 @@
 		<a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>		
 	</div>
 	<div class="copyright ">
-		<?php echo date('Y'); ?> Cherry. Designed with <?php echo '<i class="fa fa-heart-o" aria-hidden="true"></i>'; ?> by Duc Thinh
+		<?php echo date('Y'); ?> <span><?php bloginfo('sitename'); ?></span>. Designed with <?php echo '<i class="fa fa-heart-o" aria-hidden="true"></i>'; ?> by Duc Thinh
 	</div>
 </footer>  
 <?php wp_footer(); ?>

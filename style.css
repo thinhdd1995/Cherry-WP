@@ -240,6 +240,7 @@ table td {
   font-size: 18px;
   color: #ffffff;
   margin-bottom: 1em;
+  text-transform: uppercase;
 }
 #pre-footer p {
   color: #696e75;
@@ -289,6 +290,9 @@ table td {
 }
 #footer .copyright .fa {
   color: #c3917d;
+}
+#footer .copyright span {
+  text-transform: capitalize;
 }
 /*----------Main Content---------*/
 .content {

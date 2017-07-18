@@ -11,6 +11,8 @@ define('CORE', THEME_URL . "/core");
  Nhung file /core/init.php
 **/
 require_once( CORE . "/init.php");
+
+
 /**
  @ thiet lap chieu rong noi dung
 **/
@@ -51,7 +53,7 @@ if (!function_exists('ducthinh_theme_setup')){
 			'default-color' => '#e8e8e8'
 		);
 		add_theme_support('custom-background', $default_background);
-
+		add_theme_support( 'customize-selective-refresh-widgets' );
 		/* them menu */
 		register_nav_menus( array(
 			'primary-menu' => __( 'Primary Menu', 'ducthinh' ),
@@ -96,11 +98,27 @@ if (!function_exists('ducthinh_logo')) {
 	function ducthinh_logo() { ?>
 		<div class="site-name">
 			<?php
-				if ( is_home() ) {
-					printf( '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>' ,
+				
+					printf( '<a href="%1$s" title="%2$s">%3$s</a>' ,
 					get_bloginfo('url'),
 					get_bloginfo('description'),
 					get_bloginfo('sitename') );
+				
+			?>
+		</div>
+		<?php 
+	}
+}
+
+if (!function_exists('ducthinh_logo_homepage')) {
+	function ducthinh_logo_homepage() { ?>
+		<div class="page-name">
+			<?php
+				if ( is_home() ) {
+					printf( '<h1><a href="%1$s" title="Our Stories">Our Stories</a></h1>' ,
+					get_bloginfo('url'),
+					get_bloginfo('description'),
+					get_bloginfo('homepagename') );
 				}
 			?>
 		</div>
@@ -244,6 +262,55 @@ function postview_get($postID){
 }
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
+/**
+ * Tạo một section mới trong Customizer */
+function customizer_footer( $wp_customize ) {
+ 
+        // Tạo section
+    $wp_customize->add_section (
+        'section_a',
+        array(
+            'title' => 'Pre-footer',
+            'description' => 'Edit Pre-footer part',
+            'priority' => 25
+        )
+    );
+ 
+    // Tạo setting
+    $wp_customize->add_setting (
+            'Texts',
+            array(
+                'default' => ''
+            )
+        );
+ 
+        // Tạo coltrol
+        $wp_customize->add_control (
+            'control_Texts',
+            array(
+                'label' => 'Texts',
+                'section' => 'section_a',
+                'type' => 'textarea',
+                'settings' => 'Texts'
+            )
+        );
+
+        /* Image Upload */
+		$wp_customize->add_setting( 'img-upload' );
+		 
+		$wp_customize->add_control(
+		    new WP_Customize_Image_Control(
+		        $wp_customize,
+		        'img-upload',
+		        array(
+		            'label' => 'logo footer',
+		            'section' => 'section_a',
+		            'settings' => 'img-upload'
+		        )
+		    )
+		);
+}
+add_action( 'customize_register', 'customizer_footer' );
 
 
 /*===========nhúng file style.css==========*/
