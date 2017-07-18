@@ -224,14 +224,16 @@ if ( !function_exists('ducthinh_entry_meta')) {
  	function ducthinh_entry_tag(){
  		if ( has_tag()) :
 			echo '<div class="entry-footer">';	
- 			printf( __('<span class="entry-tag">Tags:  %1$s', 'ducthinh'), get_the_tag_list( '', ','));
- 			printf( __('<span class="entry-social">
+ 			printf( __('<div class="entry-tag col-md-6">Tags:  %1$s', 'ducthinh'), get_the_tag_list( '', ','));
+ 			printf(__('</div>'));
+ 			printf( __('<div class="entry-social cold-md-2 text-right">
 				<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-print" aria-hidden="true"></i></a>
  				', 'ducthinh'), get_the_tag_list( '', ','));
+ 			printf(__('</div>'));
  		endif;
  	}
  }

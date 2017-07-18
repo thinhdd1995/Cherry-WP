@@ -57,14 +57,14 @@ h6{
 }
 table,table tr, table td {
 	border: 1px solid @Mecury;
-	padding: 8px;
+	padding: 4px 9px;
 }
 /* Chia column website */
 #container{
 	max-width: 1200px;
 	margin: 0 auto;
 	background: @white;
-	padding: 10px 25px;
+	padding: 10px 0px;
 	font-family: @Droid-Serif;
 }
 .content{
@@ -91,14 +91,16 @@ table,table tr, table td {
 		padding: 0;
 	}
 	.widget{
-		padding: 1em 0;
+		padding:0 0 1em 1em;
 		ul{
 			list-style: none;
-			padding-left: 1.7em !important;
 			li{
-				margin-bottom: 8px !important;
-				list-style: square !important;
-				padding-left: 1em;
+				margin: 0.8em 0;
+				&:before{
+				content: "\2013";
+				color: @silver;
+				padding-right: 0.5em;
+				}
 			}
 		}
 		.search-form-box{
@@ -108,11 +110,16 @@ table,table tr, table td {
 				display: none;
 			}
 			#s{
-				width: 17em;
-				height: 2.8em;
+				width: 300px;
+    			height: 40px;
+    			padding: 16px;
 				&::placeholder{
 					font-style: italic;
 					color: @silver;
+				}
+				@media(max-width: @brk-small){
+					width: 230px;
+    				height: 40px;
 				}
 			}
 			&::after{
@@ -154,8 +161,7 @@ table,table tr, table td {
 				td{
 					border: 0;		
 				}
-			}	
-			a{
+				#today a{
 				padding-left: 0;
 				font-weight: 600;
 				color: #232323;
@@ -167,6 +173,7 @@ table,table tr, table td {
 				&:hover{
 					text-decoration: none;
 				}	
+			}	
 			}	
 		}
 	}
@@ -210,7 +217,7 @@ table,table tr, table td {
 	
 }
 .logo{
-	margin: 7em 0;
+	margin: 100px 0;
 	a{
 		font-family: @Script;
 		font-size: 2.02em;
@@ -232,6 +239,7 @@ table,table tr, table td {
 	background: #232323;
 	padding: 4em 0;
 	font-size: 1.17em;
+	border-bottom: 2px solid #1f1f1f;
 	img{
 		margin: 0.5em 0;
 	}
@@ -265,6 +273,7 @@ table,table tr, table td {
 	background: #1f1f1f;
 	color: @Nevada;
 	padding: 1.7em 0;
+	border-top: 1px solid #262626;
 	.social-contact{
 		a{
 			color: @Old-rose;
@@ -299,15 +308,57 @@ table,table tr, table td {
 
 
 /*----------Main Content---------*/
+#main-content{
+	padding-bottom: 4em;
+	article{
+		margin-bottom: 2.5em;
+		.entry-meta{
+			color: #bababa;
+		}
+	}
+	
+	.post_link{
+		width: 45%;
+		border: 1px solid #bababa;
+    	padding: 1em 1em 3em 2em;
+    	margin-left: 20px;
+    	h2{
+    		font-size: 14px;
+    		text-transform: uppercase;
+    		font-weight: 500;
+    		margin: 2em 0;
+    		a{
+    			color: #676767;
+    			&:hover{
+    				text-decoration: none;
+    			}
+    		}		
+    	}
+    	.entry-content{
+    		a{
+    			color: #bababa;
+    			&:hover{
+    				text-decoration: none;
+    				color: @Old-rose;
+    			}
+    		}
+    	}
+	}
+
+}
 .content{
-	padding: 4em 0;
+	padding-bottom: 4em;
 	.entry-title{
+		margin-top: 0;
+    	margin-bottom: 10px;
 		a{
-			font-size: 1.17em;
+			font-size: 14px;
 			font-family: @Droid-Serif;
+			text-transform: uppercase;
+			font-weight: 500;
 			color: #232323;
 			&:hover{
-			opacity: 0.5;
+			color: @Old-rose;
 			text-decoration: none;
 			}
 		}
@@ -318,7 +369,7 @@ table,table tr, table td {
 		a{
 			color: #232323;
 			&:hover{
-			opacity: 0.5;
+			color: @Old-rose;
 			text-decoration: none;
 			}
 			font-family: @Script;
@@ -342,19 +393,28 @@ table,table tr, table td {
 			padding-left: 3em;
 		}
 	}
-	.entry-content{
-		display: none;
-	}
+	
 	.entry-content-single{
-		padding: 2em 0 0 0;
+		padding: 1em 0 0 0;
 		blockquote{
 			color: #aeaeae;
 			font-style: italic;
 			font-size: 1.17em;
+			border-color: @Old-rose ;
+			font-weight: 500;
+		}
+		ul li{
+			list-style: none;
+			&:before{
+				color: @Old-rose;
+				content: '\25AA ';
+				padding-right: 1em;
+				font-size: 1.4em;
+			}
 		}
 	}
 	.entry-footer{
-		margin: 2.5em 0 0 0;
+		margin: 2.5em 0 3em 0;
 		.entry-tag{
 			a{
 				color: @silver;
@@ -364,19 +424,24 @@ table,table tr, table td {
 					text-decoration: none;
 				}
 			}
-			.entry-social{
-				padding-left: 22em;
+		}
+		.entry-social{
 				a{
 					font-size: 1.5em;
-					margin: 0 0.3em;
+					margin: 0 0.5em 0 0;
+					color: @silver;
+					&:hover{
+					color: @Old-rose;
+					text-decoration: none;
+					}
 				}
 				@media(max-width: @brk-medium){
-					padding:2.8em;
+					margin: 1em;
+    				text-align: left;
 				}
 				.fa-print{
 					color: #232323;
 				}
-			}
 		}
 	}
 }
