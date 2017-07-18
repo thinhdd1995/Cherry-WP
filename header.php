@@ -15,7 +15,7 @@
 								<div class="row" style="background: #222222;">
 									<div class="container">
 										<div class="col-sm-4 col-xs-8">
-											<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Cherry</a></h3>
+											<h3><?php ducthinh_logo(); ?></h3>
 										</div><!--/.col-sm-2-->
 										<div class="col-sm-8 col-xs-4">
 											<nav class="header-navigation">
@@ -36,8 +36,5 @@
 						</div><!--/.top-header-->
 
 			</header><!--/#header-->
-			<div class="logo text-center">
-				<?php ducthinh_logo(); ?>
-			</div>
-<div id="container">
+			
 		
